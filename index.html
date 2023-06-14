@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Population of Mother Russia</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+</head>
+<body>
+  <div id="header">
+    <h1>Why Maternal (family) capital policy was created in Russia in 2007?</h1>
+  </div>
+  <div id="main-container">
+    <div id="map-wrapper">
+      <div id="map-container"></div>
+      <div id="zoom-buttons">
+        <button id="zoom-in"><i class="fas fa-search-plus"></i></button>
+        <button id="zoom-out"><i class="fas fa-search-minus"></i></button>
+      </div>
+      <div id="slider-container">
+        <input type="range" id="year-slider" min="0" max="10" value="0" step="1">
+        <div id="year-labels"></div>
+        <p id="year-display">1970</p> <!-- Year display is now inside the slider container -->
+      </div>
+      <div id="info-box" style="display: none;">
+        <h2 id="info-box-title"></h2>
+        <p id="info-box-content"></p>
+      </div>
+    </div>
+    <div id="label-1990" class="slider-label">1990</div>
+    <div id="label-2007" class="slider-label">2007</div>
+
+
+    <div id="side-panel">
+      <div id="info-container"> <!-- New container for tooltip and bar-chart -->
+        <div id="tooltip" style="opacity: 0;">
+          <div id="tooltip-content"></div>
+        </div>
+      </div>
+      <div id="bar-chart"></div>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

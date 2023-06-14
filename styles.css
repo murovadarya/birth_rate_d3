@@ -1,0 +1,186 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.slider-label {
+  position: absolute;
+  bottom: 280px; /* Adjust according to your slider's position */
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: rgb(70, 72, 73);
+}
+
+#header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Roboto Bold', sans-serif;
+}
+
+#header h1 {
+  color: #000000;
+  font-size: 2em;
+}
+
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+#map-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  background: #ffffff;
+}
+
+#map-container {
+  display: flex; /* Add this line */
+  position: relative; /* Add this line */
+  width: 800px; /* Change this value to adjust the width of the map */
+  height: 562px; /* Change this value to adjust the height of the map */
+  overflow: scroll;
+}
+
+#zoom-buttons {
+  position: absolute; /* Add this line */
+  bottom: 10px; /* Add this line */
+  left: 10px; /* Add this line */
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#zoom-buttons button {
+  margin-bottom: 5px; /* Add this line */
+}
+
+#zoom-buttons button:hover {
+  background-color: #f4f4f4;
+}
+
+#slider-container {
+  width: 80%;
+  padding: 10px 0;
+  margin-top: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#year-slider {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#year-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+#year-labels span {
+  display: inline-block;
+  text-align: center;
+}
+
+#year-display {
+  margin-left: 10px;
+}
+
+#side-panel {
+  width: 500px; /* Adjust this as per your requirement */
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures children take up full width */
+}
+
+#info-container {
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Add this line */
+}
+
+
+#tooltip {
+  width: 100%; /* Ensures tooltip takes up full width of its container */
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#bar-chart {
+  height: 300px;
+  display: none; /* Hide the bar chart initially */
+}
+
+#tooltip p {
+  margin: 0 0 5px 0; /* space between paragraphs */
+  font-size: 14px; /* size of the text */
+}
+
+#tooltip p:last-child {
+  margin-bottom: 0; /* remove space after the last paragraph */
+}
+
+#tooltip-content {
+  max-width: 200px; /* max width of the tooltip content */
+}
+
+
+/* Style the bar chart SVG */
+#bar-chart svg {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%; /* Add this line */
+}
+
+/* Style the bars in the bar chart */
+#bar-chart .bar {
+  fill: #3c79a5; /* blue color for bars */
+  stroke: #3182bd; /* darker blue color for border */
+  stroke-width: 1; /* border width */
+  transition: all 0.3s ease-out;
+}
+
+/* Style the bar chart axes */
+#bar-chart .axis path,
+#bar-chart .axis line {
+  fill: none;
+  stroke: #aaa; /* gray color for axes */
+  shape-rendering: crispEdges; /* sharper lines */
+}
+
+/* Style the bar chart axis text */
+#bar-chart .axis text {
+  font-family: 'Arial', sans-serif; /* font of the axis text */
+  font-size: 12px; /* size of the axis text */
+  fill: #333; /* dark gray color for the text */
+}
+
+#info-box {
+  margin-top: 10px; /* Adjust as needed */
+  width: 80%; /* Adjust as needed */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
